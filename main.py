@@ -11,8 +11,6 @@ from sklearn.naive_bayes import GaussianNB, MultinomialNB, BernoulliNB
 from sklearn.metrics import accuracy_score
 import pickle
 
-import nltk
-nltk.download('stopwords')
 
 #Reading the dataset
 data = pd.read_csv('IMDB-Dataset.csv')
@@ -89,10 +87,10 @@ print("Train shapes : X = {}, y = {}".format(trainx.shape,trainy.shape))
 print("Test shapes : X = {}, y = {}".format(testx.shape,testy.shape))
 
 #Training
-gnb,mnb,bnb = GaussianNB(),MultinomialNB(alpha=1.0,fit_prior=True),BernoulliNB(alpha=1.0,fit_prior=True)
-gnb.fit(trainx,trainy)
-mnb.fit(trainx,trainy)
-bnb.fit(trainx,trainy)
+# gnb,mnb,bnb = GaussianNB(),MultinomialNB(alpha=1.0,fit_prior=True),BernoulliNB(alpha=1.0,fit_prior=True)
+# gnb.fit(trainx,trainy)
+# mnb.fit(trainx,trainy)
+# bnb.fit(trainx,trainy)
 
 #Prediction and Accuracy
 ypg = gnb.predict(testx)
